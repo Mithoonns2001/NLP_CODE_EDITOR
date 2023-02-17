@@ -1,7 +1,7 @@
 import openai
 import os
 
-with open("api.txt") as f:
+with open("files/api.txt") as f:
     openai.api_key = f.read().strip()
 
 class Title:
@@ -35,7 +35,7 @@ class Title:
             print("Project: {}\nCode:\n{}\n".format(project[0], project[1]))
 
     def write_to_file(self, project_name, code):
-        with open("p1.txt".format(project_name), "w") as f:
+        with open("files/p1.txt".format(project_name), "w") as f:
             f.write(code)
 
 title = Title()

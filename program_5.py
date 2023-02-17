@@ -34,7 +34,7 @@ def create_files_from_text(directory, filename):
 
 
 
-# create_files_from_text('./projects/E-commerce Website', 'p4.txt')
+# create_files_from_text('./projects/E-commerce Website', 'files/p4.txt')
 
 # import os
 

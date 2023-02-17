@@ -1,7 +1,7 @@
 import json
 import os
 
-# with open('p1.txt', 'r') as f:
+# with open('files/p1.txt', 'r') as f:
 #     file_structure = json.load(f)
 
 def create_file_structure(parent_dir, file_structure):

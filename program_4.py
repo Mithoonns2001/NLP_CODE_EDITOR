@@ -1,7 +1,7 @@
 import openai
 
 # Set up API key
-with open("api.txt") as f:
+with open("files/api.txt") as f:
     openai.api_key = f.read().strip()
 
 # Recursive function to generate code
@@ -19,14 +19,14 @@ def generate_code(input_text):
     return generated_code + generate_code(input_text)
 
 # # Read input text from file
-# with open('p3.txt', 'r') as file:
+# with open('files/p3.txt', 'r') as file:
 #     input_text = file.read()
 
 # # Generate code using recursion
 # generated_code = generate_code(input_text)
 
 # # Write generated code to file
-# with open('p4.txt', 'w') as file:
+# with open('files/p4.txt', 'w') as file:
 #     file.write(generated_code)
 
 

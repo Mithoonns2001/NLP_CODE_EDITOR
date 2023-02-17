@@ -17,5 +17,5 @@ def write_tree_file_structure_helper(folder_path, output_file, level):
 
 # if __name__ == '__main__':
 #     folder_path = Path('./projects/E-commerce Website')
-#     output_file_path = Path('p3.txt')
+#     output_file_path = Path('files/p3.txt')
 #     write_tree_file_structure(folder_path, output_file_path)
