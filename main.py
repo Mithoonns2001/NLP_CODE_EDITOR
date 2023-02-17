@@ -61,7 +61,9 @@ def read_folder():
 
 #PROGRAM_5
 def write_into_files():
-    directory = pr2.get()
+    directory_0 = pr5.get()
+    directory = 'projects/'+directory_0
+
     create_files_from_text(directory, 'p4.txt')
 
 # FOR PROGRAM_1
@@ -98,6 +100,12 @@ file_button = tk.Button(root, text="read folder", command=read_folder)
 file_button.pack(side=tk.LEFT)
 
 # FOR PROGRAM_5
+# Create a label2 and text entry field for user input
+label5 = tk.Label(root, text="update project directory:")
+label5.pack(side=tk.LEFT)
+pr5 = tk.Entry(root)
+pr5.pack(side=tk.LEFT)
+
 # Create a button to create the file structure
 file_button = tk.Button(root, text="write", command=write_into_files)
 file_button.pack(side=tk.LEFT)
