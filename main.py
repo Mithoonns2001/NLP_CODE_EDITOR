@@ -7,6 +7,7 @@ from pathlib import Path
 from program_1 import Title
 from program_2 import create_file_structure
 from program_3 import write_tree_file_structure
+from program_4 import generate_code
 from program_5 import create_files_from_text
 
 # Set up OpenAI API key
@@ -59,6 +60,19 @@ def read_folder():
     output_file_path = Path('p3.txt')
     write_tree_file_structure(folder_path, output_file_path)
 
+#  PROGRAM_4
+def generate_program():
+    # Read input text from file
+    with open('p3.txt', 'r') as file:
+        input_text = file.read()
+
+    # Generate code using recursion
+    generated_code = generate_code(input_text)
+
+    # Write generated code to file
+    with open('p4.txt', 'w') as file:
+        file.write(generated_code)
+
 #PROGRAM_5
 def write_into_files():
     directory_0 = pr5.get()
@@ -97,6 +111,12 @@ pr3.pack(side=tk.LEFT)
 
 # Create a button to create the file structure
 file_button = tk.Button(root, text="read folder", command=read_folder)
+file_button.pack(side=tk.LEFT)
+
+# FOR PROGRAM_4
+
+# Create a button to create the file structure
+file_button = tk.Button(root, text="generate code", command=generate_program)
 file_button.pack(side=tk.LEFT)
 
 # FOR PROGRAM_5
