@@ -19,7 +19,7 @@ title = Title()
 
 # Create a simple editor using Tkinter
 root = tk.Tk()
-root.title("Simple Editor")
+root.title("NLP Code Editor")
 
 # PROGRAM_1
 def add_project():
