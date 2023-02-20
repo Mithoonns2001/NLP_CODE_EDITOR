@@ -12,9 +12,12 @@ from p_4 import generate_code
 from program_5 import create_files_from_text
 # from app import MainWindow
 
+class editor(QtWidgets.QMainWindow):
+
+
 # Set up OpenAI API key
-with open("files/api.txt") as f:
-    openai.api_key = f.read().strip()
+    with open("files/api.txt") as f:
+        openai.api_key = f.read().strip()
 
 # Create an instance of the Title class from program_1
 title = Title()

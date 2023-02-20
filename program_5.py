@@ -5,7 +5,7 @@ def create_files_from_text(directory, filename):
         lines = f.readlines()
         for root, dirs, files in os.walk(directory):
             for file in files:
-                if file.endswith('.html') or file.endswith('.css') or file.endswith('.js') or file.endswith('.py') or file.endswith('.java') or file.endswith('.txt'):
+                if file.endswith('.html') or file.endswith('.css') or file.endswith('.js') or file.endswith('.py') or file.endswith('.java') or file.endswith('.txt') or file.endswith('.feature'):
                     with open(os.path.join(root, file), 'w') as f_out:
                         for i, line in enumerate(lines):
                             line = line.strip()
@@ -25,7 +25,7 @@ def create_files_from_text(directory, filename):
                                     next_line = lines[j].strip()
                                     if next_line.startswith('//') and next_line.endswith('//') or next_line.startswith('/') and next_line.endswith('/') or next_line.startswith('#') or next_line.startswith('/') or next_line.startswith('<!--') and next_line.endswith('-->'):
                                         break  # stop if a comment delimiter is encountered
-                                    if next_line.endswith('.html') or next_line.endswith('.css') or next_line.endswith('.js') or next_line.endswith('.java') or next_line.endswith('.py') or next_line.endswith('.jpg') or next_line.endswith('.png') or next_line.endswith('.gif') or next_line.endswith('.txt'):
+                                    if next_line.endswith('.html') or next_line.endswith('.css') or next_line.endswith('.js') or next_line.endswith('.java') or next_line.endswith('.py') or next_line.endswith('.jpg') or next_line.endswith('.png') or next_line.endswith('.gif') or next_line.endswith('.txt') or next_line.endswith('.feature'):
                                         break  # stop if the next file name is encountered
                                     code.append(next_line)
                                     j += 1
